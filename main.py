@@ -60,4 +60,6 @@ if __name__ == '__main__':
     while ClickButton('next') == True:
         ClickHelpButtons()
         ClickTavernButtons()
+
+    print('FOE auto help ended!')
     
