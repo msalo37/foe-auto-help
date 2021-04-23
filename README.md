@@ -7,4 +7,5 @@ Forge of Empires auto clicker for helping friends
 The program requires:
 
 pip install opencv-python
+
 pip install PyAutoGUI
