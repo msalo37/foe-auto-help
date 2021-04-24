@@ -1,11 +1,16 @@
 # foe-auto-help
 
-Forge of Empires auto clicker for helping friends
+Script for Forge Of Empires. This script automatically clicks "Help" button in the bottom of screen, including clan, friends and neighbors tabs
 
-# The program will not stop until it has finished all actions
+### Control
 
-The program requires:
+Shift + T to stop script
 
+You can change this hotkey in *main.py*
+
+### Requirements
+```
 pip install opencv-python
-
 pip install PyAutoGUI
+pip install global-hotkeys
+```
