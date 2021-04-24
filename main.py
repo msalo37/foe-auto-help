@@ -1,25 +1,12 @@
 import pyautogui
 from time import sleep
 
-def ClickHelpButtons():
+def ClickButtons(name):
     availableButton = True
     while availableButton == True:
         sleep(1)
 
-        btn = pyautogui.locateOnScreen('img/btn.png', confidence = 0.7)
-
-        if btn == None:
-            availableButton = False
-        else:
-            pyautogui.moveTo(btn)
-            pyautogui.click()
-
-def ClickTavernButtons():
-    availableButton = True
-    while availableButton == True:
-        sleep(1)
-
-        btn = pyautogui.locateOnScreen('img/tavern.png', confidence = 0.7)
+        btn = pyautogui.locateOnScreen('img/' + name + '.png', confidence = 0.7)
 
         if btn == None:
             availableButton = False
@@ -45,21 +32,20 @@ if __name__ == '__main__':
     ClickButton('back')
 
     while ClickButton('next') == True:
-        ClickHelpButtons()
+        ClickButtons('btn')
 
     ClickButton('friends')
     ClickButton('back')
 
     while ClickButton('next') == True:
-        ClickHelpButtons()
-        ClickTavernButtons()
+        ClickButtons('btn')
+        ClickButtons('tavern')
 
     ClickButton('clan')
     ClickButton('back')
 
     while ClickButton('next') == True:
-        ClickHelpButtons()
-        ClickTavernButtons()
+        ClickButtons('btn')
 
     print('FOE auto help ended!')
     
